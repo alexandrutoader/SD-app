@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Departments</title>
-    <link rel="stylesheet" href="deps_style.css">
+    <link rel="stylesheet" href="../../assets/css/deps_style.css">
 </head>
 <body>
     <div class="departments">

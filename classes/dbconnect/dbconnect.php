@@ -51,7 +51,10 @@ class DbConnection {
     }
 
     public function execute(){
-        return $this->stmt->execute();
+        $exec = new PDOStatement();
+        $exec->execute();
+
+//        return $this->stmt->execute();
     }
 
     public function resultset(){

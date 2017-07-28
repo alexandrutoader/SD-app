@@ -1,9 +1,9 @@
 <?php
 require_once '../../classes/dbconnect/dbconnect.php';
 include '../../classes/sign_up/signup.php';
-//$db = new \SD_app\DbConnection();
-//$db->query('SELECT * FROM users');
-//$rows = $db->resultset();
+$db = new \SD_app\DbConnection();
+$db->query('SELECT * FROM users');
+$rows = $db->resultset();
 
 $login = new SignUp();
 $login->register();
@@ -20,11 +20,11 @@ $login->register();
     <div class="center">
         <h2>Registration</h2>
         <form action="../../index.php" method="post">
-            Name: <input class="input" type="text" name="Name" placeholder="name"><br>
-            Surname: <input class="input" type="text" name="Surname" placeholder="surname"><br>
-            Username: <input class="input" type="text" name="Username" placeholder="user"><br>
+            Name: <input class="input" type="text" name="Name" placeholder="name" required><br>
+            Surname: <input class="input" type="text" name="Surname" placeholder="surname" required><br>
             Email: <input class="input" type="email" name="Email" placeholder="email"><br>
-            Password: <input class="input" type="password" name="Password" placeholder="password"  maxlength="16"><br><br>
+            Username: <input class="input" type="text" name="Username" placeholder="user" required><br>
+            Password: <input class="input" type="password" name="Password" placeholder="password"  maxlength="16" required><br><br>
             <input id="submit" type="submit" name="Register" value="Sign Up"><br><br>
             <label>Already have an account? &nbsp;&nbsp;<a href="../../index.php">Sign In</a></label>
         </form>
