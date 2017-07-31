@@ -10,6 +10,10 @@ class LogIn {
         if (isset($_POST['Submit'])) {
             $username = trim($_POST['Username']);
             $password = trim($_POST['Password']);
+            $username = stripslashes($username);
+            $password = stripslashes($password);
+            $sql->query("SELECT * FROM users WHERE user='$username' and password='$password';");
+
 
             if($username == "" && $password == ""){
                 echo "<h3 style='text-align: center; margin-top:150px; margin-bottom: -150px'>Please provide your username and password!</h3>";
