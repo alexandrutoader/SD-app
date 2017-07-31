@@ -20,7 +20,7 @@ $login->login();
 <div class="header">
     <div class="center">
         <h2>Authentication</h2>
-        <form action="index.php" method="post">
+        <form action="<?=$_SERVER['PHP_SELF']?>" method="post">
             Username: <input class="input" type="text" name="Username" placeholder="user"  title="Please fill the field with letters and minimum four required"><br>
             Password: <input class="input" type="password" name="Password" placeholder="password" minlength="6" maxlength="16"><br><br>
             <input id="submit" type="submit" name="Submit" value="Login"><br><br>
