@@ -8,20 +8,12 @@ class LogIn {
     {
         $sql = new DbConnection();
         if (isset($_POST['Submit'])) {
-            $username = trim($_POST['Username']);
+            $username =  trim($_POST['Username']);
+
             $password = trim($_POST['Password']);
-            $username = stripslashes($username);
-            $password = stripslashes($password);
-            $sql->query("SELECT * FROM users WHERE user='$username' and password='$password';");
-
-
-            if($username == "" && $password == ""){
+            if($username == "" || $password == ""){
                 echo "<h3 style='text-align: center; margin-top:150px; margin-bottom: -150px'>Please provide your username and password!</h3>";
-            } elseif ($username == "") {
-                echo "<h3 style='text-align: center; margin-top:150px; margin-bottom: -150px'>Please provide your username!</h3>";
-            } elseif ($password == "" && strlen($password) < 6) {
-                echo "<h3 style='text-align: center; margin-top:150px; margin-bottom: -150px'>Please provide your password! The pass must be at least 6 characters.</h3>";
-            } else {
+            }  else {
                 $sql->query('INSERT INTO users (user, password) VALUES (:username , :password )');
                 $sql->bind('username', $username);
                 $sql->bind('password', $password);

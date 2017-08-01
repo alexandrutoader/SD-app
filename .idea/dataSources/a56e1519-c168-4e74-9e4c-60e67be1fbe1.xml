@@ -12,159 +12,134 @@
     <schema id="6" parent="1" name="phpmyadmin"/>
     <schema id="7" parent="1" name="srn"/>
     <table id="8" parent="2" name="angajati"/>
-    <table id="9" parent="2" name="app"/>
-    <table id="10" parent="2" name="concediu"/>
-    <table id="11" parent="2" name="departament"/>
-    <table id="12" parent="2" name="echipa"/>
-    <table id="13" parent="2" name="manager"/>
-    <table id="14" parent="2" name="users"/>
-    <column id="15" parent="8" name="Id">
+    <table id="9" parent="2" name="concediu"/>
+    <table id="10" parent="2" name="departament"/>
+    <table id="11" parent="2" name="echipa"/>
+    <table id="12" parent="2" name="manager"/>
+    <table id="13" parent="2" name="users"/>
+    <column id="14" parent="8" name="Id">
       <Position>1</Position>
       <DataType>tinyint(100) unsigned|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="16" parent="8" name="nume">
-      <Position>2</Position>
-      <DataType>char(150)|0</DataType>
-    </column>
-    <column id="17" parent="8" name="prenume">
-      <Position>3</Position>
-      <DataType>char(150)|0</DataType>
-    </column>
-    <column id="18" parent="8" name="id_departament">
+    <column id="15" parent="8" name="id_departament">
       <Position>4</Position>
       <DataType>char(150)|0</DataType>
+      <NotNull>1</NotNull>
     </column>
+    <column id="16" parent="8" name="name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="8" name="surname">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="18" parent="8" name="Index 2">
+      <ColNames>name
+surname</ColNames>
+    </index>
     <key id="19" parent="8" name="PRIMARY">
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="20" parent="9" name="user_id">
-      <Position>1</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-    </column>
-    <column id="21" parent="9" name="user_name">
-      <Position>2</Position>
-      <DataType>varchar(255)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="22" parent="9" name="user_email">
-      <Position>3</Position>
-      <DataType>varchar(60)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="23" parent="9" name="user_pass">
-      <Position>4</Position>
-      <DataType>varchar(255)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <index id="24" parent="9" name="user_email">
-      <ColNames>user_email</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <index id="25" parent="9" name="user_name">
-      <ColNames>user_name</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <key id="26" parent="9" name="PRIMARY">
-      <ColNames>user_id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <key id="27" parent="9" name="user_name">
-      <ColNames>user_name</ColNames>
-      <UnderlyingIndexName>user_name</UnderlyingIndexName>
-    </key>
-    <key id="28" parent="9" name="user_email">
-      <ColNames>user_email</ColNames>
-      <UnderlyingIndexName>user_email</UnderlyingIndexName>
-    </key>
-    <column id="29" parent="10" name="id_angajat">
+    <foreign-key id="20" parent="8" name="FK_angajati_users">
+      <ColNames>name
+surname</ColNames>
+      <RefSchemaName>test</RefSchemaName>
+      <RefTableName>users</RefTableName>
+      <RefColNames>name
+surname</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="21" parent="9" name="id_angajat">
       <Position>1</Position>
       <DataType>tinyint(60) unsigned|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="30" parent="10" name="Zile_concediu_ramase">
+    <column id="22" parent="9" name="Zile_concediu_ramase">
       <Position>2</Position>
       <DataType>tinyint(60)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="31" parent="10" name="Concediu_medical">
+    <column id="23" parent="9" name="Concediu_medical">
       <Position>3</Position>
       <DataType>tinyint(60)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="32" parent="10" name="Status">
+    <column id="24" parent="9" name="Status">
       <Position>4</Position>
       <DataType>bit(1)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="33" parent="10" name="FK_concediu_angajati">
+    <index id="25" parent="9" name="FK_concediu_angajati">
       <ColNames>id_angajat</ColNames>
     </index>
-    <column id="34" parent="11" name="id_departament">
+    <column id="26" parent="10" name="id_departament">
       <Position>1</Position>
       <DataType>tinyint(40) unsigned|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="35" parent="11" name="Nume">
+    <column id="27" parent="10" name="Nume">
       <Position>2</Position>
       <DataType>char(60)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="36" parent="11" name="Index 2">
+    <index id="28" parent="10" name="Index 2">
       <ColNames>Nume</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="37" parent="11" name="PRIMARY">
+    <key id="29" parent="10" name="PRIMARY">
       <ColNames>id_departament</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="38" parent="11" name="Index 2">
+    <key id="30" parent="10" name="Index 2">
       <ColNames>Nume</ColNames>
       <UnderlyingIndexName>Index 2</UnderlyingIndexName>
     </key>
-    <column id="39" parent="12" name="id_echipa">
+    <column id="31" parent="11" name="id_echipa">
       <Position>1</Position>
       <DataType>tinyint(60) unsigned|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="40" parent="12" name="Echipa">
-      <Position>2</Position>
-      <DataType>char(60)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="41" parent="12" name="id_departament">
+    <column id="32" parent="11" name="id_departament">
       <Position>3</Position>
       <DataType>tinyint(60) unsigned|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="42" parent="12" name="Numar_angajati">
+    <column id="33" parent="11" name="echipa">
+      <Position>2</Position>
+      <DataType>char(60)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="11" name="numar_angajati">
       <Position>4</Position>
       <DataType>tinyint(60) unsigned|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="43" parent="12" name="FK_echipa_departament">
+    <index id="35" parent="11" name="FK_echipa_departament">
       <ColNames>id_departament</ColNames>
     </index>
-    <index id="44" parent="12" name="Index 2">
-      <ColNames>Echipa</ColNames>
+    <index id="36" parent="11" name="Index 2">
+      <ColNames>echipa</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="45" parent="12" name="PRIMARY">
+    <key id="37" parent="11" name="PRIMARY">
       <ColNames>id_echipa</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="46" parent="12" name="Index 2">
-      <ColNames>Echipa</ColNames>
+    <key id="38" parent="11" name="Index 2">
+      <ColNames>echipa</ColNames>
       <UnderlyingIndexName>Index 2</UnderlyingIndexName>
     </key>
-    <foreign-key id="47" parent="12" name="FK_echipa_departament">
+    <foreign-key id="39" parent="11" name="FK_echipa_departament">
       <ColNames>id_departament</ColNames>
       <RefSchemaName>test</RefSchemaName>
       <RefTableName>departament</RefTableName>
@@ -172,43 +147,43 @@
       <OnUpdate>no-action</OnUpdate>
       <OnDelete>no-action</OnDelete>
     </foreign-key>
-    <column id="48" parent="13" name="id_manager">
+    <column id="40" parent="12" name="id_manager">
       <Position>1</Position>
       <DataType>tinyint(60) unsigned|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="49" parent="13" name="id_departament">
+    <column id="41" parent="12" name="id_departament">
       <Position>2</Position>
       <DataType>tinyint(60) unsigned|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="50" parent="13" name="Rang">
+    <column id="42" parent="12" name="rang">
       <Position>3</Position>
       <DataType>char(60)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="51" parent="13" name="Numar_subalterni">
+    <column id="43" parent="12" name="numar_subalterni">
       <Position>4</Position>
       <DataType>tinyint(60)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="52" parent="13" name="FK_manager_departament">
+    <index id="44" parent="12" name="FK_manager_departament">
       <ColNames>id_departament</ColNames>
     </index>
-    <index id="53" parent="13" name="Index 2">
-      <ColNames>Rang</ColNames>
+    <index id="45" parent="12" name="Index 2">
+      <ColNames>rang</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="54" parent="13" name="PRIMARY">
+    <key id="46" parent="12" name="PRIMARY">
       <ColNames>id_manager</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="55" parent="13" name="Index 2">
-      <ColNames>Rang</ColNames>
+    <key id="47" parent="12" name="Index 2">
+      <ColNames>rang</ColNames>
       <UnderlyingIndexName>Index 2</UnderlyingIndexName>
     </key>
-    <foreign-key id="56" parent="13" name="FK_manager_departament">
+    <foreign-key id="48" parent="12" name="FK_manager_departament">
       <ColNames>id_departament</ColNames>
       <RefSchemaName>test</RefSchemaName>
       <RefTableName>departament</RefTableName>
@@ -216,57 +191,61 @@
       <OnUpdate>no-action</OnUpdate>
       <OnDelete>no-action</OnDelete>
     </foreign-key>
-    <column id="57" parent="14" name="id">
+    <column id="49" parent="13" name="id">
       <Position>1</Position>
       <DataType>tinyint(100) unsigned|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="58" parent="14" name="name">
+    <column id="50" parent="13" name="name">
       <Position>2</Position>
       <DataType>varchar(150)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="59" parent="14" name="surname">
+    <column id="51" parent="13" name="surname">
       <Position>3</Position>
       <DataType>varchar(150)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="60" parent="14" name="user">
+    <column id="52" parent="13" name="user">
       <Position>4</Position>
       <DataType>char(150)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="61" parent="14" name="email">
+    <column id="53" parent="13" name="email">
       <Position>5</Position>
       <DataType>char(150)|0</DataType>
     </column>
-    <column id="62" parent="14" name="password">
+    <column id="54" parent="13" name="password">
       <Position>6</Position>
       <DataType>char(30)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="63" parent="14" name="user_type">
+    <column id="55" parent="13" name="user_type">
       <Position>7</Position>
       <DataType>enum(&apos;ADMIN&apos;, &apos;USER&apos;)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;USER&apos;</DefaultExpression>
     </column>
-    <column id="64" parent="14" name="created">
+    <column id="56" parent="13" name="created">
       <Position>8</Position>
       <DataType>timestamp|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <index id="65" parent="14" name="Index 2">
+    <index id="57" parent="13" name="Index 2">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="66" parent="14" name="PRIMARY">
+    <index id="58" parent="13" name="FK_users_angajati">
+      <ColNames>name
+surname</ColNames>
+    </index>
+    <key id="59" parent="13" name="PRIMARY">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="67" parent="14" name="Index 2">
+    <key id="60" parent="13" name="Index 2">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>Index 2</UnderlyingIndexName>
     </key>

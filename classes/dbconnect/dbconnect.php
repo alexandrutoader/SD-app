@@ -10,8 +10,11 @@ class DbConnection {
     protected $pass = '';
     protected $dbname = 'test';
 
+    /** @var PDO  */
     protected $dbh;
+    /** @var string */
     protected $error;
+    /** @var  PDOStatement */
     protected $stmt;
 
     public function __construct(){
@@ -57,5 +60,12 @@ class DbConnection {
     public function resultset(){
         $this->execute();
         return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+
+    public function __destruct()
+    {
+        // TODO: Implement __destruct() method.
+        unset($this);
     }
 }

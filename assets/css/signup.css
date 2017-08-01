@@ -2,8 +2,8 @@
     text-align: center;
     margin:auto;
     margin-top:89px;
-    width:338px;
-    height:305px;
+    width:381px;
+    height:368px;
     border: 6px solid black;
     border-radius: 5px;
     background-color: #E8E8E8;
@@ -20,3 +20,6 @@ body {
     width:140px;
 }
 
+#refresh {
+    text-align: left;
+}
