@@ -11,11 +11,6 @@ $login->register();
 <head>
     <title>Register</title>
     <link rel="stylesheet" href="../../assets/css/signup.css">
-    <meta http-equiv="expires" content="0" />
-    <meta http-equiv="cache-control" content="max-age=0" />
-    <meta http-equiv="expires" content="-1" />
-    <meta http-equiv="pragma" content="no-cache" />
-    <meta http-equiv="cache-control" content="no-cache" />
 </head>
 <body>
 <div class="header">
@@ -27,6 +22,7 @@ $login->register();
             Email: <input class="input" type="email" name="Email" placeholder="email"><br>
             Username: <input class="input" type="text" name="Username" placeholder="user"><br>
             Password: <input class="input" type="password" name="Password" placeholder="password" minlength="6" maxlength="16"><br>
+            Password recovery: <input class="input" type="text" name="Recovery" placeholder="word for pass recovery"><br>
             Team: <select name="Subject">
                     <option selected="selected">Please select your Team</option>
                     <option value="OM2">OM2</option>
@@ -39,8 +35,8 @@ $login->register();
                     <option value="QC">QC</option>
                 </select><br><br>
             <input type="submit" name="Register" value="Sign Up"><br><br>
-            <label>Already have an account? &nbsp;&nbsp;<a href="../../index.php">Sign In</a></label><br><br>
-            <label> If you want to refresh the page, click <a href="javascript:window.location.reload()">here.</a></label>
+            <label style="font-size: 13px">Already have an account? &nbsp;&nbsp;<a href="../../index.php">Sign In</a></label><br><br>
+            <label style="font-size: 13px"> If you want to refresh the page, click <a href="">here.</a></label>
         </form>
     </div>
 </div>

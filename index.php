@@ -2,10 +2,6 @@
     require_once 'classes/dbconnect/dbconnect.php';
     require_once 'classes/login/login.php';
 
-    $db = new \SD_app\DbConnection();
-    $db->query('SELECT * FROM users');
-    $rows = $db->resultset();
-
 $login = new \SD_app \LogIn\LogIn();
 $login->login();
 ?>
@@ -24,7 +20,8 @@ $login->login();
             Username: <input class="input" type="text" name="Username" placeholder="user"  title="Please fill the field with letters and minimum four required"><br>
             Password: <input class="input" type="password" name="Password" placeholder="password" minlength="6" maxlength="16"><br><br>
             <input id="submit" type="submit" name="Submit" value="Login"><br><br>
-            <label>Don't have account yet? &nbsp;&nbsp;<a href="classes/sign_up/register.php">Sign Up</a></label>
+            <label style="font-size: 13px">Don't have account yet? &nbsp;&nbsp;<a href="classes/sign_up/register.php">Sign Up</a></label><br>
+            <label style="font-size: 13px">Forgot your password? &nbsp;&nbsp;<a href="classes/reset_pass/reset_pass.php">Reset password</a></label>
         </form>
     </div>
 </div>

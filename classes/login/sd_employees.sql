@@ -12,20 +12,21 @@
 
 -- Dumping structure for table test.angajati
 CREATE TABLE IF NOT EXISTS `angajati` (
-  `Id` tinyint(100) unsigned NOT NULL AUTO_INCREMENT,
+  `id` tinyint(100) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   `surname` varchar(50) NOT NULL,
-  `id_departament` char(150) NOT NULL,
-  PRIMARY KEY (`Id`),
-  KEY `Index 2` (`name`,`surname`),
-  CONSTRAINT `FK_angajati_users` FOREIGN KEY (`name`, `surname`) REFERENCES `users` (`name`, `surname`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `FK_angajati_users_2` FOREIGN KEY (`Id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  `nume_echipa` enum('OM2','Team Doc','HR','OM1','Team Marketing','SCM','Team CC','QC') NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `Index 2` (`name`,`surname`,`id`),
+  KEY `Index 3` (`nume_echipa`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
--- Dumping data for table test.angajati: ~1 rows (approximately)
+-- Dumping data for table test.angajati: ~2 rows (approximately)
 /*!40000 ALTER TABLE `angajati` DISABLE KEYS */;
-INSERT IGNORE INTO `angajati` (`Id`, `name`, `surname`, `id_departament`) VALUES
-	(1, 'Daniel', 'Ionescu', '2');
+INSERT IGNORE INTO `angajati` (`id`, `name`, `surname`, `nume_echipa`) VALUES
+	(1, 'Andrei', 'Ionescu', 'SCM'),
+	(2, 'Marian', 'Dumitru', 'OM2'),
+	(3, 'Ionut', 'Dumitru', 'OM2');
 /*!40000 ALTER TABLE `angajati` ENABLE KEYS */;
 
 
@@ -200,7 +201,7 @@ INSERT IGNORE INTO `manager` (`id_manager`, `id_departament`, `rang`, `numar_sub
 	(2, 6, 'Manager QA', 3),
 	(3, 1, 'Manager Call Center', 4),
 	(4, 2, 'Team Leader documentare', 5),
-	(5, 7, 'Team Leader SSM', 8),
+	(5, 7, 'Team Leader SCM', 8),
 	(6, 6, 'Team Leader QA', 10),
 	(7, 6, 'Team Leader QC', 10);
 /*!40000 ALTER TABLE `manager` ENABLE KEYS */;
@@ -215,35 +216,21 @@ CREATE TABLE IF NOT EXISTS `users` (
   `user` char(150) NOT NULL,
   `email` char(150) DEFAULT NULL,
   `password` char(30) NOT NULL,
+  `recovery` char(30) NOT NULL,
   `user_type` enum('ADMIN','USER') NOT NULL DEFAULT 'USER',
   `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `Index 2` (`email`),
-  KEY `FK_users_angajati` (`name`,`surname`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+  KEY `FK_users_angajati` (`name`,`surname`),
+  KEY `Index 4` (`echipa`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
--- Dumping data for table test.users: ~19 rows (approximately)
+-- Dumping data for table test.users: ~2 rows (approximately)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT IGNORE INTO `users` (`id`, `name`, `surname`, `echipa`, `user`, `email`, `password`, `user_type`, `created`) VALUES
-	(1, 'Alexandru', 'Dumitrescu', 'OM2', 'alexdumi', 'alexdumi@emg.ro', 'alexdumi123', 'USER', '2017-08-01 11:27:26'),
-	(2, 'Daniel', 'Ionescu', 'Team Doc', 'danionescu', 'danionescu@emg.ro', 'test235', 'USER', '2017-08-01 11:27:31'),
-	(3, 'Cristian', 'Preda', 'HR', 'cristipreda', NULL, 'dfhdfh', 'USER', '2017-08-01 11:27:33'),
-	(4, 'David', 'Dumitru', 'OM1', 'daviddumitru', NULL, 'gfjsdza', 'USER', '2017-08-01 11:27:35'),
-	(5, 'Alex', 'Matei', 'Team Marketing', 'alexmatei', 'alexmatei@emg.ro', 'jnlnas123', 'USER', '2017-08-01 11:27:39'),
-	(6, 'Iulian', 'Herea', 'SCM', 'iulianherea', NULL, 'nounuinew131', 'USER', '2017-08-01 11:27:43'),
-	(7, 'Maria', 'Ioana', 'Team CC', 'mariaioana', NULL, 'gjfgnfg546t', 'USER', '2017-08-01 11:27:47'),
-	(8, 'Cristina', 'Popescu', 'QC', 'cristinapopescu', NULL, 'bnuqwd436', 'USER', '2017-08-01 11:27:52'),
-	(9, 'dfhdfh', 'dfh', 'OM2', '', NULL, '', 'USER', '2017-08-01 11:32:21'),
-	(10, 'alex', 'dan', 'OM2', 'dan', NULL, 'adsgsdfhdfs3453', 'USER', '2017-08-01 12:30:26'),
-	(11, 'cristi', 'mihai', 'Team Doc', 'cristi123456', 'cristimihai@emag.ro', 'cristi12315', 'USER', '2017-08-01 12:33:12'),
-	(12, 'dfhdfh', 'dfhdfh', '', 'alex', 'alex@hfdfhj', 'dhsdhs35', 'USER', '2017-08-01 12:33:53'),
-	(15, 'mihai', 'ion', 'HR', 'mihai', 'ion@dgsdgh.ro', 'ionasgasg', 'USER', '2017-08-01 12:39:38'),
-	(16, 'dan', 'mihai', 'Team Doc', 'dan', 'ion@emg.ro', 'miifdhdfh', 'USER', '2017-08-01 12:41:01'),
-	(17, 'mihai', 'ionut', 'OM1', 'mihai', 'mihai@emag.ro', '12312512ggdfg', 'USER', '2017-08-01 12:45:41'),
-	(18, 'fhjdfjdfj', 'hjlghjdfbdb', 'Team CC', 'marian', 'dfbdfbdfb@gbfbfb', 'fhdfgndgfb', 'USER', '2017-08-01 12:46:16'),
-	(19, 'mircea', 'cristian', '', 'dan', 'cristian123455@emg.ro', 'dhsdhs35asf', 'USER', '2017-08-01 13:02:30'),
-	(20, 'asfsf', 'afasfs', '', 'alex', 'asfasf@dsgdg', 'dhsdhs35', 'USER', '2017-08-01 13:08:18'),
-	(21, '', '', 'OM2', 'alex', NULL, 'dhsdhs35', 'USER', '2017-08-01 14:47:59');
+INSERT IGNORE INTO `users` (`id`, `name`, `surname`, `echipa`, `user`, `email`, `password`, `recovery`, `user_type`, `created`) VALUES
+	(1, 'Andrei', 'Ionescu', 'SCM', 'ionescu123', 'ionescu@emg.ro', 'fdasdvsdv2234', '', 'USER', '2017-08-02 12:30:57'),
+	(2, 'Marian', 'Dumitru', 'OM2', 'marian123', 'mariandumitru@emg.ro', '', '', 'USER', '2017-08-02 15:53:45'),
+	(3, 'Ionut', 'Dumitru', 'OM2', 'ionut', 'ionut@emg.ro', '', 'acasa1234', 'USER', '2017-08-02 16:54:46');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
