@@ -9,6 +9,7 @@ class SignUp {
             $username = $_POST['Username'];
             $email = $_POST['Email'];
             $password = $_POST['Password'];
+            $pass_hash = password_hash($password, PASSWORD_DEFAULT);
             $options = $_POST['Subject'];
             $recovery = $_POST['Recovery'];
             $sql->query("SELECT * FROM users WHERE email='$email'");
@@ -28,7 +29,7 @@ class SignUp {
                     $sql->bind('options', $options);
                     $sql->bind('username', $username);
                     $sql->bind('email', $email);
-                    $sql->bind('password', $password);
+                    $sql->bind('password', $pass_hash);
                     $sql->bind('recovery', $recovery);
                     $sql->execute();
 

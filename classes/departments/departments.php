@@ -17,7 +17,7 @@
                 <td>SCM</td>
             </tr>
             <tr>
-                <td>VCR</td>
+                <td>HR</td>
             </tr>
         </table>
     </div>
