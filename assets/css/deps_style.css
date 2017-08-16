@@ -1,9 +1,14 @@
 .departments {
     /*text-align: center;*/
     margin-top:20px;
-    width:320px;
-    height:175px;
+    width:600px;
+    height:auto;
     border: 6px solid black;
     border-radius: 5px;
     background-color: #E8E8E8;
+}
+
+table, td {
+    border:1px solid black;
+    margin-bottom:2px;
 }
