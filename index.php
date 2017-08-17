@@ -5,6 +5,7 @@ session_start();
 
 $login = new \SD_app \LogIn\LogIn();
 $login->login();
+session_destroy();
 ?>
 
 <!DOCTYPE html>

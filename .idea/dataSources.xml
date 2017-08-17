@@ -7,10 +7,10 @@
       <jdbc-url>jdbc:mysql://localhost:3306/test</jdbc-url>
       <driver-properties>
         <property name="zeroDateTimeBehavior" value="convertToNull" />
-        <property name="characterEncoding" value="utf8" />
+        <property name="yearIsDateType" value="false" />
         <property name="characterSetResults" value="utf8" />
         <property name="tinyInt1isBit" value="false" />
-        <property name="yearIsDateType" value="false" />
+        <property name="characterEncoding" value="utf8" />
         <property name="autoReconnect" value="true" />
       </driver-properties>
       <libraries>
