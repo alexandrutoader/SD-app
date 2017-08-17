@@ -1,7 +1,6 @@
 .departments {
-    /*text-align: center;*/
     margin-top:20px;
-    width:600px;
+    display:inline-block;
     height:auto;
     border: 6px solid black;
     border-radius: 5px;

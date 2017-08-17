@@ -18,12 +18,12 @@ class ResetPassword {
                         $sql->query("UPDATE users SET password ='' WHERE user ='" . $username . "'");
                         $sql->bind('username', $username);
                         $sql->execute();
-                        echo "<script>alert('The password was reset successfully!'); location.href='../../index.php'</script>";
+                        echo "<script>alert('The password was reset successfully! Please enter your new password!'); location.href='../../classes/reset_pass/update_pass.php'</script>";
                     } else {
                         $sql->query("UPDATE users SET password ='' WHERE email ='" . $email . "'");
-                        $sql->bind('username', $email);
+                        $sql->bind('email', $email);
                         $sql->execute();
-                        echo "<script>alert('The password was reset successfully!'); location.href='../../index.php'</script>";
+                        echo "<script>alert('The password was reset successfully! Please enter your new password!'); location.href='../../classes/reset_pass/update_pass.php'</script>";
                     }
                 } elseif(count($row) < 1) {
                     echo "<script>alert('The user or email is not valid! Please try again with another input!');</script>";

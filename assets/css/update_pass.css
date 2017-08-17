@@ -1,0 +1,22 @@
+.center {
+    text-align: center;
+    margin:auto;
+    margin-top:180px;
+    width:340px;
+    height:200px;
+    border: 6px solid black;
+    border-radius: 5px;
+    background-color: #E8E8E8;
+}
+
+body {
+    background-color: #F5F5F5;
+}
+
+.input {
+    border-radius:4px;
+    margin-bottom:2px;
+    margin-left:1px;
+    width:140px;
+}
+
