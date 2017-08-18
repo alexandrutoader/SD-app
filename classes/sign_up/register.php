@@ -22,7 +22,6 @@ $login->register();
             Email: <input class="input" type="email" name="Email" placeholder="email"><br>
             Username: <input class="input" type="text" name="Username" placeholder="user"><br>
             Password: <input class="input" type="password" name="Password" placeholder="password" minlength="6" maxlength="16"><br>
-            Password recovery: <input class="input" type="text" name="Recovery" placeholder="word for pass recovery"><br>
             Team: <select name="Subject">
                     <option selected="selected">Please select your Team</option>
                     <option value="OM2">OM2</option>

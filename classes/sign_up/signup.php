@@ -11,7 +11,6 @@ class SignUp {
             $password = $_POST['Password'];
             $pass_hash = password_hash($password, PASSWORD_DEFAULT);
             $options = $_POST['Subject'];
-            $recovery = $_POST['Recovery'];
             $sql->query("SELECT * FROM users WHERE email='$email'");
             $checkemail = $sql->resultset();
             $sql->query("SELECT * FROM users WHERE user='$username'");
@@ -23,14 +22,13 @@ class SignUp {
             } elseif($checkuser[0] > 1){
                 echo "<script>alert('User already exists! Please select another user!')</script>";
             } else {
-                    $sql->query('INSERT INTO users (name, surname, echipa, user, email, password, recovery) VALUES (:name, :surname, :options,:username , :email,:password, :recovery )');
+                    $sql->query('INSERT INTO users (name, surname, echipa, user, email, password) VALUES (:name, :surname, :options,:username , :email,:password)');
                     $sql->bind('name', $name);
                     $sql->bind('surname', $surname);
                     $sql->bind('options', $options);
                     $sql->bind('username', $username);
                     $sql->bind('email', $email);
                     $sql->bind('password', $pass_hash);
-                    $sql->bind('recovery', $recovery);
                     $sql->execute();
 
                     $sql->query('INSERT INTO angajati (name, surname, nume_echipa) VALUES (:name, :surname, :options)');
