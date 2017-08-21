@@ -28,7 +28,7 @@ require_once "../../classes/dbconnect/dbconnect.php";
         </tr>
         <?php
         $db = new \SD_app\DbConnection();
-        $db->query("SELECT * FROM users where echipa='OM2'");
+        $db->query("SELECT * FROM users where echipa='OM2' OR echipa='OM1'");
         $result = $db->resultset();
         echo "<table style='border:1px solid black;'><tr>" . "" . "<th>Name</th>" . "" . "<th>Surname</th>" . "" . "<th>Echipa</th>" . "" . "<th>User</th>" . "" . "<th>Email</th></tr>";
         foreach($result as $output) {

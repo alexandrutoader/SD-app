@@ -1,5 +1,4 @@
 <?php
-session_start();
 class SignUp {
     public function register(){
         $sql = new \SD_app\DbConnection();
@@ -9,7 +8,6 @@ class SignUp {
             $username = $_POST['Username'];
             $email = $_POST['Email'];
             $password = md5($_POST['Password']);
-            $_SESSION['password'] = $password;
             $options = $_POST['Subject'];
             $sql->query("SELECT * FROM users WHERE email='$email'");
             $checkemail = $sql->resultset();
