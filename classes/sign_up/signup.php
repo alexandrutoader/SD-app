@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 class SignUp {
     public function register(){
         $sql = new \SD_app\DbConnection();
@@ -8,14 +8,14 @@ class SignUp {
             $surname = $_POST['Surname'];
             $username = $_POST['Username'];
             $email = $_POST['Email'];
-            $password = $_POST['Password'];
-            $pass_hash = password_hash($password, PASSWORD_DEFAULT);
+            $password = md5($_POST['Password']);
+            $_SESSION['password'] = $password;
             $options = $_POST['Subject'];
             $sql->query("SELECT * FROM users WHERE email='$email'");
             $checkemail = $sql->resultset();
             $sql->query("SELECT * FROM users WHERE user='$username'");
             $checkuser = $sql->resultset();
-            if ($name == '' || $surname == '' || $username == '' || $password == '' || $recovery == '') {
+            if ($name == '' || $surname == '' || $username == '' || $password == '') {
                 echo "<h3 style='text-align: center; margin-top: 100px;'>Please provide your name, surname, username, password, recovery password and team.</h3>";
             } elseif($checkemail[0] > 1){
                 echo "<script>alert('Email already exists! Please type another email!')</script>";
@@ -28,7 +28,7 @@ class SignUp {
                     $sql->bind('options', $options);
                     $sql->bind('username', $username);
                     $sql->bind('email', $email);
-                    $sql->bind('password', $pass_hash);
+                    $sql->bind('password', $password);
                     $sql->execute();
 
                     $sql->query('INSERT INTO angajati (name, surname, nume_echipa) VALUES (:name, :surname, :options)');

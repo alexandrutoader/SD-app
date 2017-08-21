@@ -8,12 +8,13 @@ class UpdatePassword {
         $sql = new DbConnection();
         if (isset($_POST['Update'])){
             $new_password = $_POST['Password'];
+            $hash_pass = md5($new_password);
             $confirm_password = $_POST['Confirm'];
             $username = $_SESSION['username'];
 
             if (!empty($new_password) && !empty($confirm_password) && strlen($new_password) >= 6) {
                 if($new_password === $confirm_password) {
-                    $sql->query("UPDATE users SET password='" . $new_password . "' WHERE user = '" . $username . "'");
+                    $sql->query("UPDATE users SET password='" . $hash_pass . "' WHERE user = '" . $username . "'");
                     $sql->bind('password', $new_password);
                     $sql->bind('username', $username);
                     $sql->execute();

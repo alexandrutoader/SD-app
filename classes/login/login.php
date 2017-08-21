@@ -11,19 +11,21 @@ class LogIn
         if (isset($_POST['Submit'])) {
             $username = $_POST['Username'];
             $password = $_POST['Password'];
-            $pass_hash = md5($password);
+            $pass = md5($password);
+
             if ($username == "" || $password == "") {
                 echo "<h3 style='text-align: center; margin-top:150px; margin-bottom: -150px'>Please provide your username and password!</h3>";
             } elseif (!empty($username) && !empty($password)) {
                 $sql->query("SELECT * FROM users WHERE user_type='ADMIN' AND user ='" . $username . "'");
                 $admin = $sql->resultset();
-                $sql->query("SELECT * FROM users WHERE user ='" . $username ."' and password='" . $pass_hash . "'");
+
+                $sql->query("SELECT * FROM users WHERE user ='" . $username ."' AND password='" . $pass. "'");
                 $user = $sql->resultset();
+                $a = $user[0]['password'];
+
                 if(count($admin) == 1){
                     echo "<script>alert('Login successfully!'); location.href='../SD_app/classes/departments/departments.php'</script>";
-                } elseif($pass_hash == 1){
-                    echo "well done!!!!";
-                } elseif (count($user) == 1) {
+                }  elseif (count($user) == 1 && isset($pass) === isset($a)) {
                     $sql->query("SELECT * FROM users WHERE user='" . $username . "'");
                     $teams = $sql->resultset();
                         switch ($teams[0]['echipa']) {
