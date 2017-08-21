@@ -9,6 +9,7 @@ class ResetPassword {
             $username = $_POST['Username'];
             $_SESSION['username'] = $username;
 
+
             if (!empty($username)){
                 $sql->query("SELECT * FROM users WHERE user ='" . $username ."'");
                 $user = $sql->resultset();
