@@ -13,6 +13,7 @@ class LogIn
             $password = $_POST['Password'];
             $pass = md5($password);
 
+            
             if ($username == "" || $password == "") {
                 echo "<h3 style='text-align: center; margin-top:150px; margin-bottom: -150px'>Please provide your username and password!</h3>";
             } elseif (!empty($username) && !empty($password)) {
