@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60acf9b3-c1bb-4e34-9b84-8acf27379903" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/deps_style.css" afterPath="$PROJECT_DIR$/assets/css/deps_style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/departments/cc.php" afterPath="$PROJECT_DIR$/classes/departments/cc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/departments/departments.php" afterPath="$PROJECT_DIR$/classes/departments/departments.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/departments/doc.php" afterPath="$PROJECT_DIR$/classes/departments/doc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/departments/hr.php" afterPath="$PROJECT_DIR$/classes/departments/hr.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/departments/marketing.php" afterPath="$PROJECT_DIR$/classes/departments/marketing.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/departments/om.php" afterPath="$PROJECT_DIR$/classes/departments/om.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/departments/qc.php" afterPath="$PROJECT_DIR$/classes/departments/qc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/departments/scm.php" afterPath="$PROJECT_DIR$/classes/departments/scm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/login/login.php" afterPath="$PROJECT_DIR$/classes/login/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/reset_pass/update.php" afterPath="$PROJECT_DIR$/classes/reset_pass/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/sign_up/signup.php" afterPath="$PROJECT_DIR$/classes/sign_up/signup.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/dbconnect/dbconnect.php" afterPath="$PROJECT_DIR$/classes/dbconnect/dbconnect.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="departments.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="departments.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/departments/departments.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="40" column="7" lean-forward="false" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
+            <state relative-caret-position="425">
+              <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
               <folding>
                 <marker date="1503316338610" expanded="true" signature="534:555" ph="SELECT * FRO... manager" />
                 <marker date="1503316338610" expanded="true" signature="631:654" ph="..." />
@@ -159,15 +147,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reset.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/reset_pass/reset.php">
+      <file leaf-file-name="dbconnect.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/classes/dbconnect/dbconnect.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-              <folding>
-                <marker date="1503039854854" expanded="true" signature="366:416" ph="SELECT * FRO... users" />
-                <marker date="1503039854854" expanded="true" signature="582:643" ph="UPDATE users... " />
-              </folding>
+            <state relative-caret-position="563">
+              <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -232,6 +217,7 @@
         <option value="$PROJECT_DIR$/classes/departments/qc.php" />
         <option value="$PROJECT_DIR$/classes/departments/scm.php" />
         <option value="$PROJECT_DIR$/classes/departments/departments.php" />
+        <option value="$PROJECT_DIR$/classes/dbconnect/dbconnect.php" />
       </list>
     </option>
   </component>
@@ -528,12 +514,12 @@
       <workItem from="1502979765500" duration="3874000" />
       <workItem from="1503039865212" duration="11058000" />
       <workItem from="1503308806865" duration="7252000" />
-      <workItem from="1503316403176" duration="7000" />
+      <workItem from="1503316403176" duration="220000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="229460000" />
+    <option name="totallyTimeSpent" value="229673000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -925,14 +911,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/dbconnect/dbconnect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="59" column="20" lean-forward="false" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/reset_pass/update_pass.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1120,14 +1098,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/departments/departments.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="7" lean-forward="false" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
+        <state relative-caret-position="425">
+          <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
           <folding>
             <marker date="1503316338610" expanded="true" signature="534:555" ph="SELECT * FRO... manager" />
             <marker date="1503316338610" expanded="true" signature="631:654" ph="..." />
             <marker date="1503316338610" expanded="true" signature="897:916" ph="SELECT * FRO... users" />
             <marker date="1503316338610" expanded="true" signature="984:1007" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/dbconnect/dbconnect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
