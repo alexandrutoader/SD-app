@@ -15,6 +15,7 @@ class SignUp {
             $checkemail = $sql->resultset();
             $sql->query("SELECT * FROM users WHERE user='$username'");
             $checkuser = $sql->resultset();
+            
             if ($name == '' || $surname == '' || $username == '' || $password == '') {
                 echo "<h3 style='text-align: center; margin-top: 100px;'>Please provide your name, surname, username, password, recovery password and team.</h3>";
             } elseif($checkemail[0] > 1){
