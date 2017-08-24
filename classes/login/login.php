@@ -21,7 +21,7 @@ class LogIn
 
                 $sql->query("SELECT * FROM users WHERE user ='" . $username ."' AND password='" . $pass. "'");
                 $user = $sql->resultset();
-                $a = $user[0]['password'];
+                $a = isset($user[0]) ? $user[0]['password'] : "";
 
                 if(count($admin) == 1){
                     echo "<script>alert('Login successfully!'); location.href='../SD_app/classes/departments/departments.php'</script>";
