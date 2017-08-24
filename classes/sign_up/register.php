@@ -23,19 +23,20 @@ $login->register();
             Username: <input class="input" type="text" name="Username" placeholder="user"><br>
             Password: <input class="input" type="password" name="Password" placeholder="password" minlength="6" maxlength="16"><br>
             Team: <select name="Subject">
-                    <option selected="selected">Please select your Team</option>
-                    <option value="OM2">OM2</option>
-                    <option value="Team Doc">Team Doc</option>
-                    <option value="HR">HR</option>
-                    <option value="OM1">OM1</option>
-                    <option value="Team Marketing">Team Marketing</option>
-                    <option value="SCM">SCM</option>
-                    <option value="Team CC">Team CC</option>
-                    <option value="QC">QC</option>
-                </select><br><br>
+                <option selected="selected">Please select your Team</option>
+                <option value="OM2">OM2</option>
+                <option value="Team Doc">Team Doc</option>
+                <option value="HR">HR</option>
+                <option value="OM1">OM1</option>
+                <option value="Team Marketing">Team Marketing</option>
+                <option value="SCM">SCM</option>
+                <option value="Team CC">Team CC</option>
+                <option value="QC">QC</option>
+            </select><br><br>
             <input type="submit" name="Register" value="Sign Up"><br><br>
             <label style="font-size: 13px">Already have an account? &nbsp;&nbsp;<a href="../../index.php">Sign In</a></label><br><br>
-            <label style="font-size: 13px"> If you want to refresh the page, click <a href="">here.</a></label>
+            <label style="font-size: 13px"> If you want to refresh the page, click</label>
+            <button type="reset" value="Reset" style="font-size: 11px">Reset</button>
         </form>
     </div>
 </div>
