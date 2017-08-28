@@ -16,8 +16,8 @@ $update->update();
     <div class="center">
         <h3>Update Password</h3>
         <form action="<?=$_SERVER['PHP_SELF']?>" method="post">
-            New Password: <input class="input" type="text" name="Password" placeholder="new password"><br>
-            Confirm Password: <input class="input" type="text" name="Confirm" placeholder="confirm password"><br>
+            New Password: <input class="input" type="password" name="Password" placeholder="new password"><br>
+            Confirm Password: <input class="input" type="password" name="Confirm" placeholder="confirm password"><br>
             <input id="submit" type="submit" name="Update" value="Update"><br><br>
         </form>
     </div>
