@@ -24,7 +24,13 @@ require_once "../../classes/dbconnect/dbconnect.php";
             $result = $db->resultset();
             echo "<table style='border:1px solid black;'><tr>" . "" . "<th>Id_manager</th>" . "" . "<th>Id_departament</th>" . "" . "<th>Rang</th>" . "" . "<th>Nume_manager</th>" . "" . "<th>Numar_subalterni</th></tr>";
             foreach($result as $output) {
-                echo "<td>" . $output['id_manager'] . "</td><td>" . $output['id_departament'] . "</td><td>" . $output['rang'] . "</td><td>" . $output['nume_manager'] . "</td><td>" . $output['numar_subalterni'] . "</td><td><form method='post'><input type='submit' name='delete' value='X'></form></td></tr>";
+                echo "<form method='post'>";
+                echo "<tr><td>" . $output['id_manager'] . "</td>";
+                echo "<td>" . $output['id_departament'] . "</td>";
+                echo "<td>" . $output['rang'] . "</td>";
+                echo "<td>" . $output['nume_manager'] . "</td>";
+                echo "<td>" . $output['numar_subalterni'] . "</td>";
+                echo "<td><input type='submit' name='delete' value='X'></form></td></tr>";
             }
             echo "</table><br>";
             ?>
