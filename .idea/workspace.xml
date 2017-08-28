@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60acf9b3-c1bb-4e34-9b84-8acf27379903" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/delete/delete_user.php" afterPath="$PROJECT_DIR$/classes/delete/delete_user.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/departments/departments.php" afterPath="$PROJECT_DIR$/classes/departments/departments.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/login/login.php" afterPath="$PROJECT_DIR$/classes/login/login.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,30 +26,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="departments.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="departments.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/departments/departments.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+            <state relative-caret-position="311">
+              <caret line="43" column="54" lean-forward="true" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
               <folding>
-                <marker date="1503930153264" expanded="true" signature="666:687" ph="SELECT * FRO... manager" />
-                <marker date="1503930153264" expanded="true" signature="763:786" ph="..." />
-                <marker date="1503930153264" expanded="true" signature="1506:1523" ph="..." />
-                <marker date="1503930153264" expanded="true" signature="1506:1589" ph="..." />
-                <marker date="1503930153264" expanded="true" signature="1743:1762" ph="SELECT * FRO... users" />
-                <marker date="1503930153264" expanded="true" signature="1830:1853" ph="..." />
+                <marker date="1503932357747" expanded="true" signature="740:761" ph="SELECT * FRO... manager" />
+                <marker date="1503932357747" expanded="true" signature="837:860" ph="..." />
+                <marker date="1503932357747" expanded="true" signature="1907:1926" ph="SELECT * FRO... users" />
+                <marker date="1503932357747" expanded="true" signature="1994:2017" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="delete_user.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="delete_user.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/delete/delete_user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="39" lean-forward="false" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+            <state relative-caret-position="493">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding>
-                <marker date="1503929910670" expanded="true" signature="205:254" ph="DELETE FROM " />
+                <marker date="1503932357737" expanded="true" signature="217:266" ph="DELETE FROM " />
+                <marker date="1503932357737" expanded="true" signature="787:826" ph="DELETE FROM " />
+                <marker date="1503932357737" expanded="true" signature="1292:1341" ph="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -145,16 +143,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reset_pass.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/reset_pass/reset_pass.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -168,6 +156,7 @@
     <findStrings>
       <find>execute</find>
       <find>fetchAll</find>
+      <find>table</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -200,8 +189,8 @@
         <option value="$PROJECT_DIR$/classes/reset_pass/update_pass.php" />
         <option value="$PROJECT_DIR$/classes/sign_up/signup.php" />
         <option value="$PROJECT_DIR$/classes/login/login.php" />
-        <option value="$PROJECT_DIR$/classes/delete/delete_user.php" />
         <option value="$PROJECT_DIR$/classes/departments/departments.php" />
+        <option value="$PROJECT_DIR$/classes/delete/delete_user.php" />
       </list>
     </option>
   </component>
@@ -516,12 +505,12 @@
       <workItem from="1503308806865" duration="7252000" />
       <workItem from="1503316403176" duration="7000" />
       <workItem from="1503485433404" duration="4350000" />
-      <workItem from="1503905636857" duration="12436000" />
+      <workItem from="1503905636857" duration="14639000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="256160000" />
+    <option name="totallyTimeSpent" value="258363000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -586,35 +575,12 @@
           <line>10</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/classes/delete/delete_user.php</url>
-          <line>3</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/classes/delete/delete_user.php</url>
-          <line>6</line>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/classes/delete/delete_user.php</url>
-          <line>7</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
       </breakpoints>
       <option name="time" value="31" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/classes/departments/doc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="28" lean-forward="true" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/departments/hr.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -698,12 +664,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1503930153264" expanded="true" signature="666:687" ph="SELECT * FRO... manager" />
-            <marker date="1503930153264" expanded="true" signature="763:786" ph="..." />
-            <marker date="1503930153264" expanded="true" signature="1506:1523" ph="..." />
-            <marker date="1503930153264" expanded="true" signature="1506:1589" ph="..." />
-            <marker date="1503930153264" expanded="true" signature="1743:1762" ph="SELECT * FRO... users" />
-            <marker date="1503930153264" expanded="true" signature="1830:1853" ph="..." />
+            <marker date="1503932357747" expanded="true" signature="740:761" ph="SELECT * FRO... manager" />
+            <marker date="1503932357747" expanded="true" signature="837:860" ph="..." />
+            <marker date="1503932357747" expanded="true" signature="1907:1926" ph="SELECT * FRO... users" />
+            <marker date="1503932357747" expanded="true" signature="1994:2017" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1068,27 +1032,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/delete/delete_user.php">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/tables.rnc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="39" lean-forward="false" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-          <folding>
-            <marker date="1503929910670" expanded="true" signature="205:254" ph="DELETE FROM " />
-          </folding>
+        <state relative-caret-position="298">
+          <caret line="49" column="16" lean-forward="false" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/departments/departments.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+        <state relative-caret-position="311">
+          <caret line="43" column="54" lean-forward="true" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
           <folding>
-            <marker date="1503930153264" expanded="true" signature="666:687" ph="SELECT * FRO... manager" />
-            <marker date="1503930153264" expanded="true" signature="763:786" ph="..." />
-            <marker date="1503930153264" expanded="true" signature="1506:1523" ph="..." />
-            <marker date="1503930153264" expanded="true" signature="1506:1589" ph="..." />
-            <marker date="1503930153264" expanded="true" signature="1743:1762" ph="SELECT * FRO... users" />
-            <marker date="1503930153264" expanded="true" signature="1830:1853" ph="..." />
+            <marker date="1503932357747" expanded="true" signature="740:761" ph="SELECT * FRO... manager" />
+            <marker date="1503932357747" expanded="true" signature="837:860" ph="..." />
+            <marker date="1503932357747" expanded="true" signature="1907:1926" ph="SELECT * FRO... users" />
+            <marker date="1503932357747" expanded="true" signature="1994:2017" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/delete/delete_user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <marker date="1503932357737" expanded="true" signature="217:266" ph="DELETE FROM " />
+            <marker date="1503932357737" expanded="true" signature="787:826" ph="DELETE FROM " />
+            <marker date="1503932357737" expanded="true" signature="1292:1341" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>

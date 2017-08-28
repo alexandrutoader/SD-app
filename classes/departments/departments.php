@@ -2,10 +2,13 @@
 require_once "../../classes/dbconnect/dbconnect.php";
 require_once "../delete/delete_user.php";
 
-if (isset($_POST['delete'])){
-    $delete = new Delete_user();
-    $delete->delete();
+$delete = new Delete_user();
+if (isset($_POST['del_manager'])){
+    $delete->deleteManager();
+} elseif (isset($_POST['del_user'])){
+    $delete->deleteUser();
 }
+
 
 ?>
 <!DOCTYPE>
@@ -36,8 +39,10 @@ if (isset($_POST['delete'])){
                 <td><?php echo $output['rang']; ?></td>
                 <td><?php echo $output['nume_manager']; ?></td>
                 <td><?php echo $output['numar_subalterni']; ?></td>
-                <input type ='hidden' name="id_manager" value="<?php echo $output['id_manager'] ?>">
-                <td><input type='submit' name='delete' value='X'></form></td></tr>
+                <td><input type='submit' name='update_manager' value='Update'>
+                <td><input type='submit' name='del_manager' value='Delete'>
+                <input type ='hidden' name="id_manager" value="<?php echo $output['id_manager'] ?>"></form></td></tr>
+
 
         <?php
             }
@@ -48,8 +53,17 @@ if (isset($_POST['delete'])){
         $db->query("SELECT * FROM users");
         $result = $db->resultset();
         echo "<table style='border:1px solid black;'><tr>" . "" . "<th>Name</th>" . "" . "<th>Surname</th>" . "" . "<th>Echipa</th>" . "" . "<th>User</th>" . "" . "<th>Email</th></tr>";
-        foreach($result as $output) {
-            echo "</td><td>" . $output['name'] . "</td><td>" . $output['surname'] . "</td><td>" . $output['echipa'] . "</td><td>" . $output['user'] . "</td><td>" . $output['email'] . "</td></tr>";
+        foreach($result as $output) { ?>
+            <form action ="../../classes/departments/departments.php"  method='post'>
+            <tr><td><?php echo $output['name']; ?></td>
+            <td><?php echo $output['surname']; ?></td>
+            <td><?php echo $output['echipa']; ?></td>
+            <td><?php echo $output['user']; ?></td>
+            <td><?php echo $output['email']; ?></td>
+            <input type ='hidden' name="id" value="<?php echo $output['id'] ?>">
+                <td><input type='submit' name='update_user' value='Update'>
+                <td><input type='submit' name='del_user' value='Delete'></form></td></tr>
+        <?php
         }
         echo "</table>";
         ?>
