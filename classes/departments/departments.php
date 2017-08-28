@@ -1,5 +1,11 @@
 <?php
 require_once "../../classes/dbconnect/dbconnect.php";
+require_once "../delete/delete_user.php";
+
+if (isset($_POST['delete'])){
+    $delete = new Delete_user();
+    $delete->delete();
+}
 
 ?>
 <!DOCTYPE>
@@ -23,18 +29,20 @@ require_once "../../classes/dbconnect/dbconnect.php";
             $db->query("SELECT * FROM manager");
             $result = $db->resultset();
             echo "<table style='border:1px solid black;'><tr>" . "" . "<th>Id_manager</th>" . "" . "<th>Id_departament</th>" . "" . "<th>Rang</th>" . "" . "<th>Nume_manager</th>" . "" . "<th>Numar_subalterni</th></tr>";
-            foreach($result as $output) {
-                echo "<form method='post'>";
-                echo "<tr><td>" . $output['id_manager'] . "</td>";
-                echo "<td>" . $output['id_departament'] . "</td>";
-                echo "<td>" . $output['rang'] . "</td>";
-                echo "<td>" . $output['nume_manager'] . "</td>";
-                echo "<td>" . $output['numar_subalterni'] . "</td>";
-                echo "<td><input type='submit' name='delete' value='X'></form></td></tr>";
+            foreach($result as $output) { ?>
+                <form action ="../../classes/departments/departments.php"  method='post'>
+                <tr><td><?php echo $output['id_manager']; ?></td>
+                <td><?php echo $output['id_departament']; ?></td>
+                <td><?php echo $output['rang']; ?></td>
+                <td><?php echo $output['nume_manager']; ?></td>
+                <td><?php echo $output['numar_subalterni']; ?></td>
+                <input type ='hidden' name="id_manager" value="<?php echo $output['id_manager'] ?>">
+                <td><input type='submit' name='delete' value='X'></form></td></tr>
+
+        <?php
             }
             echo "</table><br>";
             ?>
-        </tr>
         <?php
         $db = new \SD_app\DbConnection();
         $db->query("SELECT * FROM users");

@@ -28,7 +28,7 @@ class LogIn
                 }  elseif (count($user) == 1) {
                     $sql->query("SELECT * FROM users WHERE user='" . $username . "'");
                     $teams = $sql->resultset();
-                        switch ($teams[0]['echipa']) {
+                    switch ($teams[0]['echipa']) {
                             case "OM2":
                                 echo "<script>alert('Login successfully!'); location.href='../SD_app/classes/departments/om.php'</script>";
                                 break;
