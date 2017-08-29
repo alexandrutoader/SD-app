@@ -8,7 +8,7 @@ class DbConnection {
     protected $host = 'localhost';
     protected $user = 'root';
     protected $pass = '';
-    protected $dbname = 'test';
+    protected $dbname = 'sd_app';
 
     /** @var PDO  */
     protected $dbh;

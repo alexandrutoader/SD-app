@@ -5,6 +5,8 @@ require_once "../delete/delete_user.php";
 $delete = new Delete_user();
 if (isset($_POST['del_manager'])){
     $delete->configManager();
+} elseif (isset($_POST['update_manager'])){
+    $delete->configManager();
 } elseif (isset($_POST['del_user'])){
     $delete->configUser();
 } elseif (isset($_POST['update_user'])){

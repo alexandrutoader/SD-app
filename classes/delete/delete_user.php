@@ -12,45 +12,22 @@ class Delete_user {
         } elseif (isset($_POST['update_manager'])) {
             $id = $_POST['id_manager'];
             $_SESSION['id_manager'] = $id;
-            header("location:../../classes/update_user/user_update.php?id=$id");
+            header("location:../../classes/update_user/manager_update.php?id=$id");
         }
     }
 
     public function updateManager(){
         $id = $_SESSION['id_manager'];
         $sql = new \SD_app\DbConnection();
+        $rang = $_POST['Rang'];
         $name = $_POST['Name'];
-        $surname = $_POST['Surname'];
-        $options = $_POST['Team'];
-        $username = $_POST['User'];
-        $email = $_POST['Email'];
-        $password = md5($_POST['Password']);
-        $user_type= $_POST['User_type'];
-        $sql->query("SELECT * FROM users WHERE email='$email'");
-        $checkemail = $sql->resultset();
-        $sql->query("SELECT * FROM users WHERE user='$username'");
-        $checkuser = $sql->resultset();
-        $mail = isset($checkemail[0]['email']) ? $checkemail[0] : '';
-        $user = isset($checkuser[0]['user']) ? $checkuser[0] : '';
-
-        if ($name == '' || $surname == '' || $username == '' || $password == '') {
-            echo "<h3 style='text-align: center; margin-top: 100px;'>Please provide your name, surname, username, password and team.</h3>";
-        } elseif (count($mail) > 1 && $checkuser[0] > 1){
-            echo "<script>alert('Email and user already exists! Please type another email and user!')</script>";
-        } elseif(count($mail) > 1){
-            echo "<script>alert('Email already exists! Please type another email!')</script>";
-        } elseif(count($user) > 1){
-            echo "<script>alert('User already exists! Please select another user!')</script>";
+        if ($rang == '' || $name == '') {
+            echo "<h3 style='text-align: center; margin-top: 100px;'>Please provide your rank and your name.</h3>";
         } else {
-            echo "<script>alert('The user have been updated!'); location.href='../../classes/departments/departments.php'</script>";
-            $sql->query("UPDATE users SET name='" . $name. "', surname='" . $surname. "', echipa='" . $options. "', user='" . $username. "', email='" . $email. "', password='" . $password. "', user_type='" . $user_type. "' 
-                            WHERE id='" . $id. "'");
+            echo "<script>alert('Succesfully updated!'); location.href='../../classes/departments/departments.php'</script>";
+            $sql->query("UPDATE manager SET rang='" . $rang. "', nume_manager='" . $name. "' WHERE id_manager='" . $id. "'");
+            $sql->bind('rang', $rang);
             $sql->bind('name', $name);
-            $sql->bind('surname', $surname);
-            $sql->bind('options', $options);
-            $sql->bind('username', $username);
-            $sql->bind('email', $email);
-            $sql->bind('password', $password);
             $sql->execute();
         }
     }

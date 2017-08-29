@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="test@localhost">
-  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
     <root id="1"/>
     <schema id="2" parent="1" name="test">
       <Current>1</Current>
@@ -145,8 +145,6 @@ id</ColNames>
       <RefSchemaName>test</RefSchemaName>
       <RefTableName>departament</RefTableName>
       <RefColNames>id_departament</RefColNames>
-      <OnUpdate>no-action</OnUpdate>
-      <OnDelete>no-action</OnDelete>
     </foreign-key>
     <column id="42" parent="12" name="id_manager">
       <Position>1</Position>
@@ -189,8 +187,6 @@ id</ColNames>
       <RefSchemaName>test</RefSchemaName>
       <RefTableName>departament</RefTableName>
       <RefColNames>id_departament</RefColNames>
-      <OnUpdate>no-action</OnUpdate>
-      <OnDelete>no-action</OnDelete>
     </foreign-key>
     <column id="51" parent="13" name="id">
       <Position>1</Position>
