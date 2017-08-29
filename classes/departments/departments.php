@@ -4,12 +4,12 @@ require_once "../delete/delete_user.php";
 
 $delete = new Delete_user();
 if (isset($_POST['del_manager'])){
-    $delete->deleteManager();
+    $delete->configManager();
 } elseif (isset($_POST['del_user'])){
-    $delete->deleteUser();
+    $delete->configUser();
+} elseif (isset($_POST['update_user'])){
+    $delete->configUser();
 }
-
-
 ?>
 <!DOCTYPE>
 <html>
@@ -42,8 +42,6 @@ if (isset($_POST['del_manager'])){
                 <td><input type='submit' name='update_manager' value='Update'>
                 <td><input type='submit' name='del_manager' value='Delete'>
                 <input type ='hidden' name="id_manager" value="<?php echo $output['id_manager'] ?>"></form></td></tr>
-
-
         <?php
             }
             echo "</table><br>";

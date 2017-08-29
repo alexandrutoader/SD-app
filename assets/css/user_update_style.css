@@ -1,0 +1,29 @@
+.departments {
+    margin-top:20px;
+    display:inline-block;
+    height:auto;
+    border: 6px solid black;
+    border-radius: 5px;
+    background-color: #E8E8E8;
+}
+
+.departments input {
+    float:right;
+}
+
+table, td {
+    border:1px solid black;
+    margin-bottom:2px;
+}
+
+.center {
+    text-align: center;
+    margin:auto;
+    margin-top:50px;
+    width: 340px;
+    height: 320px;
+    border: 6px solid black;
+    border-radius: 5px;
+    background-color: #E8E8E8;
+
+}

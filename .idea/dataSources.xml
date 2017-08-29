@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="537618280">
-    <data-source source="LOCAL" name="test@localhost" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="a56e1519-c168-4e74-9e4c-60e67be1fbe1">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="test@localhost" uuid="a56e1519-c168-4e74-9e4c-60e67be1fbe1">
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.fabric.jdbc.FabricMySQLDriver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/test</jdbc-url>
@@ -22,12 +22,10 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="Data Source" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="b2be36e7-d671-41af-88e7-6ab6ea86019a">
+    <data-source source="LOCAL" name="Data Source" uuid="b2be36e7-d671-41af-88e7-6ab6ea86019a">
       <synchronize>true</synchronize>
       <jdbc-url>jdbc://</jdbc-url>
       <default-dialect>MySQL</default-dialect>
-      <libraries />
     </data-source>
   </component>
 </project>
-
