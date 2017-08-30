@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `angajati` (
   KEY `Index 2` (`name`,`surname`,`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
 
--- Dumping data for table sd_app.angajati: ~18 rows (approximately)
+-- Dumping data for table sd_app.angajati: ~21 rows (approximately)
 /*!40000 ALTER TABLE `angajati` DISABLE KEYS */;
 INSERT IGNORE INTO `angajati` (`id`, `name`, `surname`, `nume_echipa`) VALUES
 	(1, 'Ciprian', 'Damian', 'OM2'),
@@ -115,7 +115,7 @@ CREATE TABLE IF NOT EXISTS `manager` (
   CONSTRAINT `FK_manager_departament` FOREIGN KEY (`id_departament`) REFERENCES `departament` (`id_departament`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
--- Dumping data for table sd_app.manager: ~4 rows (approximately)
+-- Dumping data for table sd_app.manager: ~7 rows (approximately)
 /*!40000 ALTER TABLE `manager` DISABLE KEYS */;
 INSERT IGNORE INTO `manager` (`id_manager`, `id_departament`, `rang`, `nume_manager`, `numar_subalterni`) VALUES
 	(1, 7, 'Team Leader SCM', 'Andrei Damian', 10),
@@ -145,7 +145,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   KEY `Index 4` (`echipa`)
 ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
--- Dumping data for table sd_app.users: ~12 rows (approximately)
+-- Dumping data for table sd_app.users: ~15 rows (approximately)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT IGNORE INTO `users` (`id`, `name`, `surname`, `echipa`, `user`, `email`, `password`, `user_type`, `created`) VALUES
 	(1, 'Ionut', 'Cristescu', 'OM1', 'ionut.cristescu', 'ionut.cristescu@emag.ro', '2f7e6fcc8598ebefd291892090027042', 'USER', '2017-08-30 11:15:24'),
