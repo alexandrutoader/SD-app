@@ -2,8 +2,10 @@
 require_once '../../classes/dbconnect/dbconnect.php';
 require_once '../../classes/sign_up/signup.php';
 
-$login = new SignUp();
-$login->register();
+if(isset($_POST['Register'])) {
+    $login = new SignUp();
+    $login->register();
+}
 ?>
 
 <!DOCTYPE html>

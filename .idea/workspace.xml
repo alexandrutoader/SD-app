@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60acf9b3-c1bb-4e34-9b84-8acf27379903" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/sign_up/register.php" afterPath="$PROJECT_DIR$/classes/sign_up/register.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/sign_up/signup.php" afterPath="$PROJECT_DIR$/classes/sign_up/signup.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -129,8 +131,8 @@
       <file leaf-file-name="register.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/sign_up/register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="85" lean-forward="false" selection-start-line="38" selection-start-column="85" selection-end-line="38" selection-end-column="85" />
+            <state relative-caret-position="323">
+              <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -139,14 +141,14 @@
       <file leaf-file-name="signup.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/sign_up/signup.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="15" column="73" lean-forward="true" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
               <folding>
-                <marker date="1504074816412" expanded="true" signature="411:451" ph="SELECT * FRO... users" />
-                <marker date="1504074816412" expanded="true" signature="525:567" ph="SELECT * FRO... users" />
-                <marker date="1504074816412" expanded="true" signature="881:919" ph="..." />
-                <marker date="1504074816412" expanded="true" signature="1503:1631" ph="INSERT INTO users... " />
-                <marker date="1504074816412" expanded="true" signature="2018:2102" ph="INSERT INTO angajati... " />
+                <marker date="1504080136849" expanded="true" signature="411:451" ph="SELECT * FRO... users" />
+                <marker date="1504080136849" expanded="true" signature="525:567" ph="SELECT * FRO... users" />
+                <marker date="1504080136849" expanded="true" signature="851:889" ph="..." />
+                <marker date="1504080136849" expanded="true" signature="1494:1622" ph="INSERT INTO users... " />
+                <marker date="1504080136849" expanded="true" signature="2009:2093" ph="INSERT INTO angajati... " />
               </folding>
             </state>
           </provider>
@@ -208,7 +210,6 @@
         <option value="$PROJECT_DIR$/classes/departments/qc.php" />
         <option value="$PROJECT_DIR$/classes/departments/scm.php" />
         <option value="$PROJECT_DIR$/classes/departments/om.php" />
-        <option value="$PROJECT_DIR$/classes/sign_up/register.php" />
         <option value="$PROJECT_DIR$/classes/reset_pass/update_pass.php" />
         <option value="$PROJECT_DIR$/classes/login/login.php" />
         <option value="$PROJECT_DIR$/assets/css/user_update_style.css" />
@@ -219,6 +220,7 @@
         <option value="$PROJECT_DIR$/classes/update_user/manager_update.php" />
         <option value="$PROJECT_DIR$/classes/delete/delete_user.php" />
         <option value="$PROJECT_DIR$/classes/dbconnect/dbconnect.php" />
+        <option value="$PROJECT_DIR$/classes/sign_up/register.php" />
         <option value="$PROJECT_DIR$/classes/sign_up/signup.php" />
       </list>
     </option>
@@ -472,12 +474,12 @@
       <workItem from="1503316403176" duration="7000" />
       <workItem from="1503485433404" duration="4350000" />
       <workItem from="1503905636857" duration="31049000" />
-      <workItem from="1504012239621" duration="7588000" />
+      <workItem from="1504012239621" duration="12456000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="282361000" />
+    <option name="totallyTimeSpent" value="287229000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -586,11 +588,11 @@
         <state relative-caret-position="170">
           <caret line="10" column="48" lean-forward="true" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
           <folding>
-            <marker date="1504074816412" expanded="true" signature="411:451" ph="SELECT * FRO... users" />
-            <marker date="1504074816412" expanded="true" signature="525:567" ph="SELECT * FRO... users" />
-            <marker date="1504074816412" expanded="true" signature="881:919" ph="..." />
-            <marker date="1504074816412" expanded="true" signature="1503:1631" ph="INSERT INTO users... " />
-            <marker date="1504074816412" expanded="true" signature="2018:2102" ph="INSERT INTO angajati... " />
+            <marker date="1504080136849" expanded="true" signature="411:451" ph="SELECT * FRO... users" />
+            <marker date="1504080136849" expanded="true" signature="525:567" ph="SELECT * FRO... users" />
+            <marker date="1504080136849" expanded="true" signature="851:889" ph="..." />
+            <marker date="1504080136849" expanded="true" signature="1494:1622" ph="INSERT INTO users... " />
+            <marker date="1504080136849" expanded="true" signature="2009:2093" ph="INSERT INTO angajati... " />
           </folding>
         </state>
       </provider>
@@ -911,14 +913,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/sign_up/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="85" lean-forward="false" selection-start-line="38" selection-start-column="85" selection-end-line="38" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1003,16 +997,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/classes/sign_up/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/classes/sign_up/signup.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="15" column="73" lean-forward="true" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
           <folding>
-            <marker date="1504074816412" expanded="true" signature="411:451" ph="SELECT * FRO... users" />
-            <marker date="1504074816412" expanded="true" signature="525:567" ph="SELECT * FRO... users" />
-            <marker date="1504074816412" expanded="true" signature="881:919" ph="..." />
-            <marker date="1504074816412" expanded="true" signature="1503:1631" ph="INSERT INTO users... " />
-            <marker date="1504074816412" expanded="true" signature="2018:2102" ph="INSERT INTO angajati... " />
+            <marker date="1504080136849" expanded="true" signature="411:451" ph="SELECT * FRO... users" />
+            <marker date="1504080136849" expanded="true" signature="525:567" ph="SELECT * FRO... users" />
+            <marker date="1504080136849" expanded="true" signature="851:889" ph="..." />
+            <marker date="1504080136849" expanded="true" signature="1494:1622" ph="INSERT INTO users... " />
+            <marker date="1504080136849" expanded="true" signature="2009:2093" ph="INSERT INTO angajati... " />
           </folding>
         </state>
       </provider>

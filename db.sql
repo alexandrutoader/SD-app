@@ -24,9 +24,9 @@ CREATE TABLE IF NOT EXISTS `angajati` (
   PRIMARY KEY (`id`),
   KEY `Index 3` (`nume_echipa`),
   KEY `Index 2` (`name`,`surname`,`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
--- Dumping data for table sd_app.angajati: ~6 rows (approximately)
+-- Dumping data for table sd_app.angajati: ~18 rows (approximately)
 /*!40000 ALTER TABLE `angajati` DISABLE KEYS */;
 INSERT IGNORE INTO `angajati` (`id`, `name`, `surname`, `nume_echipa`) VALUES
 	(1, 'Ciprian', 'Damian', 'OM2'),
@@ -34,7 +34,19 @@ INSERT IGNORE INTO `angajati` (`id`, `name`, `surname`, `nume_echipa`) VALUES
 	(3, 'Ionut', 'Cristescu', 'OM1'),
 	(4, 'Ana', 'Costea', 'HR'),
 	(5, 'Daniel', 'Dumitru', 'SCM'),
-	(6, 'Adrian', 'Ionescu', 'OM2');
+	(6, 'Adrian', 'Ionescu', 'OM2'),
+	(7, 'Maria', 'Ionescu', 'OM2'),
+	(8, 'Alex', 'Florescu', 'Team Marketing'),
+	(9, 'Ciprian', 'Teodor', 'Team CC'),
+	(10, 'Ioana', 'Dobre', 'QC'),
+	(11, 'Dorel', 'mihai', 'HR'),
+	(12, 'Dan', 'Stoica', 'OM2'),
+	(13, 'Dorel', 'Dobrescu', 'SCM'),
+	(14, 'Ciprian', 'Tudose', 'SCM'),
+	(15, 'Bogdan', 'Tudorel', 'QC'),
+	(16, 'Bogdan', 'Tud', ''),
+	(17, 'Dorel', 'Dobrescu', ''),
+	(18, 'Dorel', 'Dobrescu', 'OM2');
 /*!40000 ALTER TABLE `angajati` ENABLE KEYS */;
 
 
@@ -125,15 +137,24 @@ CREATE TABLE IF NOT EXISTS `users` (
   UNIQUE KEY `Index 2` (`email`,`user`),
   KEY `FK_users_angajati` (`name`,`surname`),
   KEY `Index 4` (`echipa`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
 
--- Dumping data for table sd_app.users: ~4 rows (approximately)
+-- Dumping data for table sd_app.users: ~13 rows (approximately)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT IGNORE INTO `users` (`id`, `name`, `surname`, `echipa`, `user`, `email`, `password`, `user_type`, `created`) VALUES
 	(3, 'Ionut', 'Cristescu', 'OM1', 'ionut.cristescu', 'ionut.cristescu@emag.ro', '2f7e6fcc8598ebefd291892090027042', 'USER', '2017-08-29 12:37:11'),
 	(4, 'Ana', 'Costea', 'HR', 'ana.costea', 'ana.costea@emag.ro', '43177dfb9750fe9007716a35f3512325', 'USER', '2017-08-29 12:37:31'),
 	(5, 'Daniel', 'Dumitru', 'SCM', 'daniel.dumitru', 'daniel.dumitru@emag.ro', '66f3c0ba74813dab8080eed1c871d26e', 'USER', '2017-08-29 12:37:48'),
-	(6, 'Adrian', 'Ionescu', 'OM2', 'adrian.ionescu', 'adrian.ionescu@emag.ro', '8519ae1aeb8670a63402749d4f3683e5', 'ADMIN', '2017-08-29 17:53:24');
+	(6, 'Adrian', 'Ionescu', 'OM2', 'adrian.ionescu', 'adrian.ionescu@emag.ro', '8519ae1aeb8670a63402749d4f3683e5', 'ADMIN', '2017-08-29 17:53:24'),
+	(7, 'Ciprian', 'Andrei', 'Team Doc', 'ciprian.andrei', 'ciprian.andrei@emag.ro', '66f3c0ba74813dab8080eed1c871d26e', 'USER', '2017-08-29 12:37:48'),
+	(8, 'Maria', 'Ionescu', 'OM2', 'maria.ionescu', 'maria.ionescu@emag.ro', '53f8db2e4934c145e168c6c74b34fc2c', 'USER', '2017-08-30 09:30:55'),
+	(9, 'Alex', 'Florescu', 'Team Marketing', 'alex.florescu', 'alex.florescu@emag.ro', 'cfd26e86648d719b8f6409f8a3b46396', 'USER', '2017-08-30 09:34:30'),
+	(10, 'Ciprian', 'Teodor', 'Team CC', 'ciprian.teodor', '', '4006fdb0d5628e361883829825749474', 'USER', '2017-08-30 09:35:57'),
+	(11, 'Ioana', 'Dobre', 'QC', 'ioana.dobre', 'ioana.dobre@emag.ro', 'eafe30125b40e3ef117178c8ddc9739f', 'USER', '2017-08-30 09:36:33'),
+	(12, 'Dorel', 'Mihai', 'HR', 'dore.mihai', 'alex@dgsdg.ro', '7b01af214719660fb85ec69a412ebd26', 'USER', '2017-08-30 09:39:19'),
+	(13, 'Dan', 'Stoica', 'OM2', 'dan.stoica', 'dan.stoica@emag.ro', 'ec1171fa6457ea2d022bc93505a1305b', 'USER', '2017-08-30 09:39:42'),
+	(14, 'Dorel', 'Dobrescu', 'SCM', 'dorel.dobrescu', 'dorel.dobrescu@emag.ro', 'a1788285e331b8ec67f255c32d3efff0', 'USER', '2017-08-30 10:33:59'),
+	(27, 'Ciprian', 'Tudose', 'SCM', 'ciprian.tudose', 'ciprian.tudose@emag.ro', 'e146390a2f2f38ff198bc130fe1013cf', 'USER', '2017-08-30 10:41:02');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;

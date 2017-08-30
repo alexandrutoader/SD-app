@@ -14,15 +14,14 @@ class SignUp {
             $sql->query("SELECT * FROM users WHERE user='$username'");
             $checkuser = $sql->resultset();
             $mail = isset($checkemail[0]['email']) ? $checkemail[0] : '';
-            $user = isset($checkuser[0]['user']) ? $checkuser[0] : '';
 
-            if ($name == '' || $surname == '' || $username == '' || $password == '') {
+            if ($name == '' || $surname == '' || $username == '' || $password == '' || $options == 'Please select your Team') {
                 echo "<h3 style='text-align: center; margin-top: 100px;'>Please provide your name, surname, username, password and team.</h3>";
-            } elseif (count($mail) > 1 && $checkuser[0] > 1){
+            } elseif (count($mail[0]) > 1 && count($checkuser[0]) > 1){
                 echo "<script>alert('Email and user already exists! Please type another email and user!')</script>";
-            } elseif(count($mail) > 1){
+            } elseif(count($mail[0]) > 1){
                 echo "<script>alert('Email already exists! Please type another email!')</script>";
-            } elseif(count($user) > 1){
+            } elseif(count($checkuser[0]) > 1){
                 echo "<script>alert('User already exists! Please select another user!')</script>";
             } else {
                     $sql->query('INSERT INTO users (name, surname, echipa, user, email, password) VALUES (:name, :surname, :options,:username , :email,:password)');
